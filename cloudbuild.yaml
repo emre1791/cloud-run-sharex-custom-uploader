@@ -1,0 +1,23 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "$_IMAGE_TAG", "."]
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "$_IMAGE_TAG"]
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "run",
+        "deploy",
+        "$_SERVICE_NAME",
+        "--image",
+        "$_IMAGE_TAG",
+        "--platform",
+        "managed",
+        "--region",
+        "$_REGION",
+        "--allow-unauthenticated",
+      ]
+substitutions:
+  IMAGE_TAG: europe-west1-docker.pkg.dev/emre-aksoy/docker/sharex-uploader
+  SERVICE_NAME: sharex-uploader
+  REGION: europe-west1

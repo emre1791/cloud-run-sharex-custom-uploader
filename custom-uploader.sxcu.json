@@ -1,0 +1,18 @@
+{
+  "Version": "14.0.0",
+  "Name": "Cloud Run Uploader",
+  "DestinationType": "ImageUploader, TextUploader, FileUploader",
+  "RequestMethod": "POST",
+  "RequestURL": "string",
+  "Parameters": {},
+  "Headers": {
+    "X-API-Key": "string"
+  },
+  "Body": "Binary",
+  "Arguments": {},
+  "FileFormName": "{json:filename}",
+  "URL": "{json:url}",
+  "ThumbnailURL": "{json:thumbnail_url}",
+  "DeletionURL": "{json:deletion_url}",
+  "ErrorMessage": "{json:error}"
+}
