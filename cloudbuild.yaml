@@ -18,6 +18,6 @@ steps:
         "--allow-unauthenticated",
       ]
 substitutions:
-  IMAGE_TAG: europe-west1-docker.pkg.dev/emre-aksoy/docker/sharex-uploader
-  SERVICE_NAME: sharex-uploader
-  REGION: europe-west1
+  _IMAGE_TAG: europe-west1-docker.pkg.dev/emre-aksoy/docker/sharex-uploader
+  _SERVICE_NAME: sharex-uploader
+  _REGION: europe-west1
